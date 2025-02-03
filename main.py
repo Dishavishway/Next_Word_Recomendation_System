@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List
 import json
-
+import os
 app = FastAPI()
 
 # Enable CORS for frontend
@@ -46,3 +46,8 @@ async def predict(request: TextRequest):
 @app.get("/")
 async def root():
     return {"message": "Next Word Recommendation API is running"} 
+
+if __name__ == "__main__":
+    import uvicorn
+    port = int(os.environ.get('PORT', 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
