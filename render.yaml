@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: next-word-recommendation
-    runtime: python
+    name: next-word-recommender
+    env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11.11
+        value: 3.8.18
