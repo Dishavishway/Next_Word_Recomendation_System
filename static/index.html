@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Word Recommendation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Next Word Recommendation</h1>
+        
+        <div class="input-section">
+            <textarea 
+                id="userInput" 
+                placeholder="Enter your text here..."
+                rows="3"
+            ></textarea>
+            <button id="predictBtn">Predict Next Word</button>
+        </div>
+
+        <div class="predictions-section">
+            <h2>Suggested Next Words:</h2>
+            <div id="predictions" class="predictions-container">
+                <!-- Predictions will be inserted here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
